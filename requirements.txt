@@ -1,5 +1,4 @@
 blobfile==1.3.1
-clip==1.0
 dlib==19.23.1
 gdown==4.6.0
 lmdb==1.2.1
@@ -12,11 +11,11 @@ oauth2client==4.1.3
 opencv_python==4.5.5.62
 pandas==1.1.5
 Pillow==9.4.0
-protobuf==4.21.12
+protobuf>=3.9.2,<3.20
 pydrive==1.3.1
 PyYAML==6.0
 scipy==1.7.3
 tensorflow==2.9.1
-torch==1.13.0
-torchvision==0.10.0
+torch==1.12.0
+torchvision==0.13.0
 tqdm==4.64.1
