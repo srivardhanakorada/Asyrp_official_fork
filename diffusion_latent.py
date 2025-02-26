@@ -8,7 +8,6 @@ import torch
 from torch import nn
 import torchvision.utils as tvu
 import torchvision.transforms as transforms
-import torch.nn.functional as F
 from losses.clip_loss import CLIPLoss
 import copy
 from models.ddpm.diffusion import DDPM
