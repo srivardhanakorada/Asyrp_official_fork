@@ -1,3 +1,7 @@
 test/
 precomputed/
 pretrained/
+data
+__pycache__
+logs
+runs
