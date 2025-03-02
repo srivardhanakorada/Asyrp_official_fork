@@ -1,10 +1,10 @@
 DATASET_PATHS = {
 	'FFHQ': '/hdd1/datasets/celeba_hq/',
-	'CelebA_HQ': '/hdd1/datasets/celeba_hq/',
+	'CelebA_HQ': 'data/celeba_hq',
 	'AFHQ': '/hdd1/datasets/afhq/',
 	'LSUN':  '/hdd1/datasets/lsun/',
     'IMAGENET': '/hdd1/datasets/imagenet/',
-	'CUSTOM': '/hdd1/custom/',
+	'CUSTOM': 'data/fair_face/',
 	'CelebA_HQ_Dialog': '/hdd1/datasets/img_align_celeba/',
 	'MetFACE': '/hdd1/datasets/metfaces/',
 }

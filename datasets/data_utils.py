@@ -36,8 +36,8 @@ class CustomImageDataset(Dataset):
 def get_dataset(dataset_type, dataset_paths, config, target_class_num=None, gender=None):
     # if category is CUSTOM, get images from custom arg path
     if config.data.category == "CUSTOM":
-        train_dataset = CustomImageDataset(dataset_paths['custom_train'], transforms.Compose([transforms.Resize((256, 256)), transforms.ToTensor(), transforms.Normalize((0.5, 0.5, 0.5), (0.5, 0.5, 0.5))]))
-        test_dataset = CustomImageDataset(dataset_paths['custom_test'], transforms.Compose([transforms.Resize((256, 256)), transforms.ToTensor(), transforms.Normalize((0.5, 0.5, 0.5), (0.5, 0.5, 0.5))]))
+        train_dataset = CustomImageDataset(os.path.join(dataset_paths['CUSTOM'],"train"), transforms.Compose([transforms.Resize((256, 256)), transforms.ToTensor(), transforms.Normalize((0.5, 0.5, 0.5), (0.5, 0.5, 0.5))]))
+        test_dataset = CustomImageDataset(os.path.join(dataset_paths['CUSTOM'],"test"), transforms.Compose([transforms.Resize((256, 256)), transforms.ToTensor(), transforms.Normalize((0.5, 0.5, 0.5), (0.5, 0.5, 0.5))]))
         return train_dataset, test_dataset
 
     if dataset_type == 'AFHQ':

@@ -220,4 +220,7 @@ SRC_TRG_TXT_DIC = {
         'orange2ping_pong_ball': (['a photo of an orange'], ['a photo of a ping pong ball']),
         'orange2mushroom': (['a photo of an orange'], ['a photo of a mushroom']),
 
+# Weather
+        
+
 }

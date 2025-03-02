@@ -225,7 +225,7 @@ def parse_args_and_config():
             sys.exit(0)
     if args.save_to_folder: args.training_image_folder = args.save_to_folder
     # add device
-    device = torch.device("cuda:1") if torch.cuda.is_available() else torch.device('cpu')
+    device = torch.device("cuda") if torch.cuda.is_available() else torch.device('cpu')
     logging.info("Using device: {}".format(device))
     new_config.device = device
     # set random seed
@@ -246,7 +246,7 @@ def dict2namespace(config):
 def main():
     args, config = parse_args_and_config()
     if torch.cuda.is_available(): assert args.bs_train % torch.cuda.device_count() == 0, f"Number of GPUs ({torch.cuda.device_count()}) must be a multiple of batch size ({args.bs_train})"
-    runner = Asyrp(args, config, device="cuda:1") # if you want to specify the device, add device="something" in the argument
+    runner = Asyrp(args, config, device="cuda") # if you want to specify the device, add device="something" in the argument
     try:
         if args.run_train: runner.run_training()
         elif args.run_test: runner.run_test()
